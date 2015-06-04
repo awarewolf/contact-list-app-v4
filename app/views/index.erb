@@ -1,1 +1,60 @@
-<h1>Home Page</h1>
+<div class="well">
+  <h1>Contact List App V4 (API)</h1>
+</div>
+
+<div class="col-md-12">
+  <div class="btn-group" role="group" aria-label="contact options">
+    <button class="btn btn-primary" id='load_contacts'>Load all contacts</button>
+    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-contact">Add a contact</button>
+  </div>
+<div>
+
+<br>
+
+<div class="col-md-4">
+  <ul id="contact-list">
+  </ul>
+</div>
+
+<div class="col-md-8">
+  <div class="welcome">
+  Click on a contact to see details
+  </div>
+  <div id="contact-info">
+    <h2 id="contact-full-name"></h2>
+    <div class="contact-email"></div>
+  </div>
+</div>
+
+  <!-- Bootstrap modal add contact form  -->
+<div id="modal-contact" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form class="form" id="ajax-contact" method="post" action="/contact/add">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Add a contact</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">First Name</span>
+              <input id="firstname" name="firstname" type="text" class="form-control" placeholder="" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">Last Name</span>
+              <input id="lastname" name="lastname" type="text" class="form-control" placeholder="" required>
+              <span class="input-group-btn"></span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ require 'active_support/all'
 # Load Sinatra Framework (with AR)
 require 'sinatra'
 require 'sinatra/activerecord'
+require "sinatra/json"
 
 require 'pry'
 
@@ -17,7 +18,7 @@ configure do
   set :root, APP_ROOT.to_path
   set :server, :puma
 
-  enable :sessions
+  enable :sessions, :logging
   set :session_secret, ENV['SESSION_KEY'] || 'lighthouselabssecret'
 
   set :views, File.join(Sinatra::Application.root, "app", "views")

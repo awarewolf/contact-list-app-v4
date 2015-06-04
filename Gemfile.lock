@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/EmmanuelOga/ffaker
+  revision: 04641b9e383f4503f91d0b196d333571f48e19af
+  specs:
+    ffaker (2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,6 +85,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  ffaker!
   pry
   puma
   rake
